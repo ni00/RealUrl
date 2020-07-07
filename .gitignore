@@ -1,0 +1,12 @@
+.idea
+.idea/
+.vscode
+.vscode/
+.build
+.build/
+*.xml
+*.json
+node_modules
+node_modules/
+dist
+dist/
