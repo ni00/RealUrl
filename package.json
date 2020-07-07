@@ -1,0 +1,28 @@
+{
+  "name": "realurl-typescript",
+  "version": "1.0.0",
+  "description": "用nodejs获取视频直播直链",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "npm run build && node dist/index.js"
+  },
+  "keywords": [
+    "npm",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ni00/realurl.git"
+  },
+  "author": "nixiaobai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ni00/realurl/issues"
+  },
+  "homepage": "https://github.com/ni00/realurl#readme",
+  "dependencies": {
+    "typescript": "^3.9.6"
+  }
+}
