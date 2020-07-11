@@ -2,12 +2,13 @@ const axios = require("axios");
 
 export function main(url: string) {
     return new Promise(function (resolve, reject) {
-        
         axios
             .get(url)
             .then(function (response: any) {
                 const html: string = response.data;
-                const rid: any = html.match(/(?<="room_id_str":")(.+?)(?=",")/g);
+                const rid: any = html.match(
+                    /(?<="room_id_str":")(.+?)(?=",")/g
+                );
                 axios
                     .get(
                         `https://webcast-hl.amemv.com/webcast/room/reflow/info/?room_id=${rid[0]}&live_id=1`
@@ -16,7 +17,9 @@ export function main(url: string) {
                         const json: any = response.data;
                         if (json && json["status_code"] == 0) {
                             resolve(
-                                json['data']['room']['stream_url']['rtmp_pull_url']
+                                json["data"]["room"]["stream_url"][
+                                    "rtmp_pull_url"
+                                ]
                             );
                         } else {
                             reject(
