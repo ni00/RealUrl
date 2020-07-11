@@ -3,6 +3,7 @@ const axios = require("axios");
 export function main(url: string) {
     return new Promise(function (resolve, reject) {
         //默认房间id都是数字
+        //仅仅支持部分斗鱼直播间
        const rid:any = url.match(/[0-9]+/g);
        axios.get(`https://www.douyu.com/${rid}`)
        .then(function (response: any) {
