@@ -5,6 +5,7 @@ const douyin = require("./website/douyin");
 const bilibili = require("./website/bilibili");
 const ixigua = require("./website/ixigua");
 const now = require("./website/now");
+const zhanqi = require("./website/zhanqi");
 
 const regs: any = [
     [/www\.huya\.com/g, huya],
@@ -13,7 +14,8 @@ const regs: any = [
     [/v\.douyin\.com/g, douyin],
     [/live\.bilibili\.com/g, bilibili],
     [/live\.ixigua\.com/g,ixigua],
-    [/now\.qq\.com/g,now]
+    [/now\.qq\.com/g,now],
+    [/www\.zhanqi\.tv/g,zhanqi]
 ];
 
 export function getStreamUrl(url: string) {
