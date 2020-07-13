@@ -3,13 +3,14 @@ const douyu = require("./website/douyu");
 const kugou = require("./website/kugou");
 const douyin = require("./website/douyin");
 const bilibili = require("./website/bilibili");
-
+const ixigua = require("./website/ixigua");
 const regs: any = [
     [/www\.huya\.com/g, huya],
     [/www\.douyu\.com/g, douyu],
     [/fanxing\.kugou\.com/g, kugou],
     [/v\.douyin\.com/g, douyin],
     [/live\.bilibili\.com/g, bilibili],
+    [/live\.ixigua\.com/g,ixigua]
 ];
 
 export function getStreamUrl(url: string) {
