@@ -1,27 +1,16 @@
-const huya = require("./website/huya");
-const douyu = require("./website/douyu");
-const kugou = require("./website/kugou");
-const douyin = require("./website/douyin");
-const bilibili = require("./website/bilibili");
-const ixigua = require("./website/ixigua");
-const now = require("./website/now");
-const zhanqi = require("./website/zhanqi");
-const yy = require("./website/yy");
-const cc = require("./website/cc");
-const egame = require("./website/egame");
-
 const regs: any = [
-    [/www\.huya\.com/g, huya],
-    [/www\.douyu\.com/g, douyu],
-    [/fanxing\.kugou\.com/g, kugou],
-    [/v\.douyin\.com/g, douyin],
-    [/live\.bilibili\.com/g, bilibili],
-    [/live\.ixigua\.com/g,ixigua],
-    [/now\.qq\.com/g,now],
-    [/www\.zhanqi\.tv/g,zhanqi],
-    [/www\.yy\.com/g,yy],
-    [/cc\.163\.com/g,cc],
-    [/egame\.qq\.com/g,egame]
+    [/www\.huya\.com/g, require("./website/huya")],
+    [/www\.douyu\.com/g, require("./website/douyu")],
+    [/fanxing\.kugou\.com/g, require("./website/kugou")],
+    [/v\.douyin\.com/g, require("./website/douyin")],
+    [/live\.bilibili\.com/g, require("./website/bilibili")],
+    [/live\.ixigua\.com/g,require("./website/ixigua")],
+    [/now\.qq\.com/g,require("./website/now")],
+    [/www\.zhanqi\.tv/g,require("./website/zhanqi")],
+    [/www\.yy\.com/g,require("./website/yy")],
+    [/cc\.163\.com/g,require("./website/cc")],
+    [/egame\.qq\.com/g,require("./website/egame")],
+    [/www\.huajiao\.com/g,require("./website/huajiao")]
 ];
 
 export function getStreamUrl(url: string) {
