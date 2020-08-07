@@ -4,21 +4,13 @@ export function main(url: string) {
     return new Promise(function (resolve, reject) {
         const rid: any = url.match(/[0-9]+/g);
         axios
-            .get(`https://www.douyu.com/${rid}`)
+            .get(`https://service-428niun7-1257334448.sh.apigw.tencentcs.com/release/douyu?rid=${rid[0]}`)
             .then(function (response: any) {
-                const html: string = response.data;
-                const reg: RegExp = /(?<=streamUrl\s*=\s*".*live\/)(.+?)(?=_.*\.flv)/;
-                const strs: any = html.match(reg);
-                if (strs && strs.length >= 1) {
-                    const real_url =
-                        "http://tx2play1.douyucdn.cn/live/" +
-                        strs[0] +
-                        ".flv?uuid=";
-                    resolve(real_url);
-                } else {
-                    reject(
-                        "DOUYU=>No match results:Maybe the roomid is error,or this room is not open!"
-                    );
+                const txt: string = response.data;
+                if(String(txt).indexOf("error")>-1 || String(txt).indexOf("未开播")>-1){
+                    reject("EGAME=>No match results:Maybe the roomid is error,or this room is not open!");
+                }else{
+                    resolve(String(txt))
                 }
             })
             .catch(function (error: any) {
