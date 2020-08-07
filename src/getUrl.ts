@@ -11,7 +11,8 @@ const regs: any = [
     [/cc\.163\.com/,require("./website/cc")],
     [/egame\.qq\.com/,require("./website/egame")],
     [/www\.huajiao\.com/,require("./website/huajiao")],
-    [/live\.kuaishou\.com/,require("./website/kuaishou")]
+    [/live\.kuaishou\.com/,require("./website/kuaishou")],
+    [/www\.twitch\.tv/,require("./website/twitch")]
 ];
 
 export function getStreamUrl(url: string) {
