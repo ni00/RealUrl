@@ -1,17 +1,17 @@
 const regs: any = [
-    [/www\.huya\.com/g, require("./website/huya")],
-    [/www\.douyu\.com/g, require("./website/douyu")],
-    [/fanxing\.kugou\.com/g, require("./website/kugou")],
-    [/v\.douyin\.com/g, require("./website/douyin")],
-    [/live\.bilibili\.com/g, require("./website/bilibili")],
-    [/live\.ixigua\.com/g,require("./website/ixigua")],
-    [/now\.qq\.com/g,require("./website/now")],
-    [/www\.zhanqi\.tv/g,require("./website/zhanqi")],
-    [/www\.yy\.com/g,require("./website/yy")],
-    [/cc\.163\.com/g,require("./website/cc")],
-    [/egame\.qq\.com/g,require("./website/egame")],
-    [/www\.huajiao\.com/g,require("./website/huajiao")],
-    [/live\.kuaishou\.com/g,require("./website/kuaishou")]
+    [/www\.huya\.com/, require("./website/huya")],
+    [/www\.douyu\.com/, require("./website/douyu")],
+    [/fanxing\.kugou\.com/, require("./website/kugou")],
+    [/v\.douyin\.com/, require("./website/douyin")],
+    [/live\.bilibili\.com/, require("./website/bilibili")],
+    [/live\.ixigua\.com/,require("./website/ixigua")],
+    [/now\.qq\.com/,require("./website/now")],
+    [/www\.zhanqi\.tv/,require("./website/zhanqi")],
+    [/www\.yy\.com/,require("./website/yy")],
+    [/cc\.163\.com/,require("./website/cc")],
+    [/egame\.qq\.com/,require("./website/egame")],
+    [/www\.huajiao\.com/,require("./website/huajiao")],
+    [/live\.kuaishou\.com/,require("./website/kuaishou")]
 ];
 
 export function getStreamUrl(url: string) {
